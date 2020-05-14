@@ -1,0 +1,35 @@
+html{
+
+    font-family: monospace;
+}
+
+body{
+    margin:0px;
+}
+
+#someDiv{
+    width:200px;
+    height:100px;
+    border:black 1px solid;
+}
+
+#infovizDiv svg{
+    overflow: scroll;
+    background-color: #dddddd;
+}
+
+.active{
+    stroke: red;
+    stroke-width: 2px;
+    stroke-dasharray: 8 5;
+
+}
+
+.tentative{
+    stroke:green;
+    stroke-width: 4px;
+}
+
+circle:hover{
+    fill: magenta;
+}
