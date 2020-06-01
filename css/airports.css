@@ -1,0 +1,79 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.map-container{
+    width: 100%;
+    height:90vh;
+    border: 1px solid #dddddd;
+}
+
+.route {
+    fill: blueviolet;
+    stroke-width: 8px;
+}
+
+.overlayOLD {
+    position: relative;
+    /* top: 10px; */
+    /* left: 100px;  */
+    text-align: center;
+    color: #D9594C;
+    background: rgba(0, 0, 0, 0.25);
+    max-width: 410px;
+    margin: auto;
+    border-radius: 10px;
+    /* border: 1px solid red;   */
+
+
+}
+
+/*START Briney's Code*/
+.overlay{ 
+    background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    text-align: left;
+    position: relative;
+    color: #D9594C;
+    top: -15px;
+    height: 200px;
+    padding: 25px 0 10px 75px;
+}
+
+.overlay h1{
+font-size:2.5em;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, #000000 90%);
+    z-index: 1000;
+}
+
+
+/*END Briney's Code*/
+
+
+.overlay button {
+    font: 600 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #3386c0;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.overlay button:hover {
+    background-color: #4ea0da;
+}

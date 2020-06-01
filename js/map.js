@@ -1,6 +1,6 @@
 var dataUrl = "/data/gunDeath.geojson";
 var width = 960, 
-    height = 500;
+    height = "90vh";
 
 // Define data projection
 // d3.geoConicEqualArea
@@ -10,10 +10,15 @@ var projection = d3.geoAlbers();
 var path = d3.geoPath()
              .projection(projection);
 
+var zoom = d3.zoom()
+             .scaleExtent([1,8])
+             .on('zoom', zoomed);
+
 var svg = d3.select('.map-container').append('svg')
             .attr('width', width)
             .attr('height',height);
 
+svg.call(zoom);
 // Load the data
 fetch(dataUrl)
     .then(response=>{
@@ -62,4 +67,11 @@ function createMap (data) {
             d3.select(this).classed('active', false);
             d3.select('.description').html('');
         })
+}
+
+function zoomed() {
+    svg
+      .selectAll('path') // To prevent stroke width from scaling
+      .attr('transform', d3.event.transform)
+      .style('stroke-width',0.2);
 }
